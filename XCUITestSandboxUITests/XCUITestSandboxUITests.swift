@@ -3,10 +3,6 @@ import XCTest
 class XCUITestSandboxUITests: XCTestCase {
     var app = XCUIApplication()
     
-    var textfield: XCUIElement { return app.textFields.element }
-    var returnButton: XCUIElement { return app.keyboards.buttons["Return"] }
-    var textResult: XCUIElement { return app.staticTexts["textArea"] }
-    
     var slider: XCUIElement { return app.sliders["Completion"] }
     var progressBar: XCUIElement { return app.progressIndicators.element }
     
@@ -24,11 +20,11 @@ class XCUITestSandboxUITests: XCTestCase {
     func testLabelCopiesTextField() throws {
         app.launch()
         
-        textfield.tap()
-        textfield.typeText("test")
-        returnButton.tap()
+        MainScreen.textField.pageElement.tap()
+        MainScreen.textField.pageElement.typeText("test")
+        MainScreen.returnButton.pageElement.tap()
         
-        XCTAssertTrue( textResult.label == "test")
+        XCTAssertTrue(MainScreen.textResult.pageElement.label == "test")
     }
     
     func testSliderControlsProgress() {
@@ -55,6 +51,21 @@ class XCUITestSandboxUITests: XCTestCase {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
+        }
+    }
+}
+
+enum MainScreen {
+    case textField, returnButton, textResult
+    
+    var pageElement: XCUIElement {
+        switch self {
+        case .textField:
+            return XCUIApplication().textFields.element
+        case .textResult:
+            return XCUIApplication().staticTexts["textArea"]
+        case .returnButton:
+            return XCUIApplication().keyboards.buttons["Return"]
         }
     }
 }
