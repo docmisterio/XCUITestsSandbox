@@ -13,16 +13,16 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testLabelShowsTextFieldInput() throws {
         app.launch()
-        MainPage.labelResultShowsTextFieldInput()
+        MainPageObjectModel.labelResultShowsTextFieldInput()
         
-        XCTAssert(MainPage.label.textFieldResult.exists)
+        XCTAssert(MainPageObjectModel.Label.textFieldResult.exists)
     }
     
     func testSliderControlsProgress() {
         app.launch()
-        MainPage.adjustSliderTo(number: 1)
+        MainPageObjectModel.adjustSliderTo(number: 1)
         
-        guard let completion = MainPage.progressBar.theLoneProgressBar.value as? String else {
+        guard let completion = MainPageObjectModel.ProgressBar.theLoneProgressBar.value as? String else {
             XCTFail()
             return
         }
@@ -31,20 +31,20 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testButtonsShowAlerts() {
         app.launch()
-        MainPage.tapBlueColorButton()
+        MainPageObjectModel.tapBlueColorButton()
         
-        XCTAssert(MainPage.alerts.alertBlue.exists)
-        MainPage.dismissBlueAlert()
+        XCTAssert(MainPageObjectModel.Alerts.alertBlue.exists)
+        MainPageObjectModel.dismissBlueAlert()
     }
     
     func testToggleChangesNavBarText() {
         app.launch()
-        MainPage.toggleAlphaToOmega()
+        MainPageObjectModel.toggleAlphaToOmega()
         
-        XCTAssert(MainPage.navBars.omega.exists)
-        MainPage.toggleOmegaToAlpha()
+        XCTAssert(MainPageObjectModel.NavBars.omega.exists)
+        MainPageObjectModel.toggleOmegaToAlpha()
         
-        XCTAssert(MainPage.navBars.alpha.exists)
+        XCTAssert(MainPageObjectModel.NavBars.alpha.exists)
     }
 
     func testLaunchPerformance() throws {
