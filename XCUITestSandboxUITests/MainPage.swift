@@ -44,11 +44,11 @@ class MainPage {
     )
     
     static let textField = TextField(
-        theLoneTextField: XCUIApplication().textFields["mainTextField"]
+        theLoneTextField: XCUIApplication().windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element
     )
     
     static let label = Label(
-        textFieldResult: XCUIApplication().staticTexts["textArea"]
+        textFieldResult: XCUIApplication().staticTexts["test"]
     )
     
     static let slider = Slider(
@@ -60,12 +60,19 @@ class MainPage {
     )
     
     static let toggle = Toggle(
-        alphaToggle: <#T##XCUIElement#>,
-        omegaToggle: <#T##XCUIElement#>)
+        alphaToggle: XCUIApplication().buttons["Alpha"],
+        omegaToggle: XCUIApplication().buttons["Omega"]
+    )
     
+    static let alerts = Alerts(
+        alertBlue: XCUIApplication().alerts["Blue"].buttons["OK"],
+        alertRed: XCUIApplication().alerts["Red"].buttons["OK"],
+        alertGreen: XCUIApplication().alerts["Green"].buttons["OK"]
+    )
     
-    
-    
-    
+    static func labelResultShowsTextFieldInput() {
+        MainPage.textField.theLoneTextField.tap()
+        MainPage.textField.theLoneTextField.typeText("test")
+        MainPage.buttons.returnButton.tap()
     }
-
+}

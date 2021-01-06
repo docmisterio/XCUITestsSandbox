@@ -8,9 +8,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var segmentedControl: UISegmentedControl!
 
     @IBAction func textChanged(_ sender: UITextField) {
+        label.accessibilityIdentifier = "textFieldResultLabel"
         label.text = textField.text
-        label.accessibilityLabel = "main"
-        label.accessibilityIdentifier = "mainTextField"
     }
 
     @IBAction func sliderDragged(_ sender: UISlider) {
