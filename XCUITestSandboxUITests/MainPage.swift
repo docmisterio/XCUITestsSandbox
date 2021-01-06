@@ -44,7 +44,7 @@ class MainPage {
     )
     
     static let textField = TextField(
-        theLoneTextField: XCUIApplication().windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element
+        theLoneTextField: XCUIApplication().textFields["textField"]
     )
     
     static let label = Label(

@@ -20,7 +20,6 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testSliderControlsProgress() {
         app.launch()
-        
         MainPage.slider.theLoneSlider.adjust(toNormalizedSliderPosition: 1)
         guard let completion = MainPage.progressBar.theLoneProgressBar.value as? String else {
             XCTFail()
