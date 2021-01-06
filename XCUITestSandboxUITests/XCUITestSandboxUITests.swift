@@ -3,9 +3,6 @@ import XCTest
 class XCUITestSandboxUITests: XCTestCase {
     var app = XCUIApplication()
     
-    var slider: XCUIElement { return app.sliders["Completion"] }
-    var progressBar: XCUIElement { return app.progressIndicators.element }
-    
     var blueButton: XCUIElement { return app.staticTexts["Blue"] }
     var blueButtonAlert: XCUIElement { return app.alerts["Blue"] }
     
@@ -45,27 +42,25 @@ class XCUITestSandboxUITests: XCTestCase {
         XCTAssertTrue(blueButtonAlert.exists)
         blueButtonAlert.buttons["OK"].tap()
     }
+    
+    func testToggle() {
+        
+        app/*@START_MENU_TOKEN@*/.buttons["Alpha"]/*[[".segmentedControls.buttons[\"Alpha\"]",".buttons[\"Alpha\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["Omega"]/*[[".segmentedControls.buttons[\"Omega\"]",".buttons[\"Omega\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        
+        app.buttons["Red"].tap()
+        app.alerts["Red"].scrollViews.otherElements.buttons["OK"].tap()
+        
+        
+        
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
-        }
-    }
-}
-
-enum MainScreen {
-    case textField, returnButton, textResult
-    
-    var pageElement: XCUIElement {
-        switch self {
-        case .textField:
-            return XCUIApplication().textFields.element
-        case .textResult:
-            return XCUIApplication().staticTexts["textArea"]
-        case .returnButton:
-            return XCUIApplication().keyboards.buttons["Return"]
         }
     }
 }

@@ -9,6 +9,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func textChanged(_ sender: UITextField) {
         label.text = textField.text
+        label.accessibilityLabel = "main"
+        label.accessibilityIdentifier = "mainTextField"
     }
 
     @IBAction func sliderDragged(_ sender: UISlider) {
