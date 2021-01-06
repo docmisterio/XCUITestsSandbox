@@ -75,4 +75,16 @@ class MainPage {
         MainPage.textField.theLoneTextField.typeText("test")
         MainPage.buttons.returnButton.tap()
     }
+    
+    static func adjustSliderTo(number: CGFloat) {
+        MainPage.slider.theLoneSlider.adjust(toNormalizedSliderPosition: number)
+    }
+    
+    static func tapBlueColorButton() {
+        MainPage.buttons.blueButton.tap()
+    }
+    
+    static func dismissBlueAlert() {
+        MainPage.alerts.alertBlue.tap()
+    }
 }

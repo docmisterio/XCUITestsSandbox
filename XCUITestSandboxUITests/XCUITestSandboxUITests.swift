@@ -20,7 +20,8 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testSliderControlsProgress() {
         app.launch()
-        MainPage.slider.theLoneSlider.adjust(toNormalizedSliderPosition: 1)
+        MainPage.adjustSliderTo(number: 1)
+        
         guard let completion = MainPage.progressBar.theLoneProgressBar.value as? String else {
             XCTFail()
             return
@@ -30,21 +31,15 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testButtonsShowAlerts() {
         app.launch()
+        MainPage.tapBlueColorButton()
         
-//        blueButton.tap()
-//        XCTAssertTrue(blueButtonAlert.exists)
-//        blueButtonAlert.buttons["OK"].tap()
+        XCTAssert(MainPage.alerts.alertBlue.exists)
+        MainPage.dismissBlueAlert()
     }
     
     func testToggle() {
         
-        
-        
-        
-
-        
-        
-        
+    
     }
 
     func testLaunchPerformance() throws {
