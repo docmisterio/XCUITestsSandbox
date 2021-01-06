@@ -36,6 +36,11 @@ class MainPage {
         let alertGreen: XCUIElement
     }
     
+    struct NavBars {
+        let alpha: XCUIElement
+        let omega: XCUIElement
+    }
+    
     static let buttons = Buttons(
         redButton: XCUIApplication().buttons["Red"],
         greenButton: XCUIApplication().buttons["Green"],
@@ -59,7 +64,7 @@ class MainPage {
         theLoneProgressBar: XCUIApplication().progressIndicators.element
     )
     
-    static let toggle = Toggle(
+    static let toggles = Toggle(
         alphaToggle: XCUIApplication().buttons["Alpha"],
         omegaToggle: XCUIApplication().buttons["Omega"]
     )
@@ -68,6 +73,11 @@ class MainPage {
         alertBlue: XCUIApplication().alerts["Blue"].buttons["OK"],
         alertRed: XCUIApplication().alerts["Red"].buttons["OK"],
         alertGreen: XCUIApplication().alerts["Green"].buttons["OK"]
+    )
+    
+    static let navBars = NavBars(
+        alpha: XCUIApplication().navigationBars["Alpha"].staticTexts["Alpha"],
+        omega: XCUIApplication().navigationBars["Omega"].staticTexts["Omega"]
     )
     
     static func labelResultShowsTextFieldInput() {
@@ -86,5 +96,13 @@ class MainPage {
     
     static func dismissBlueAlert() {
         MainPage.alerts.alertBlue.tap()
+    }
+    
+    static func toggleAlphaToOmega() {
+        MainPage.toggles.omegaToggle.tap()
+    }
+    
+    static func toggleOmegaToAlpha() {
+        MainPage.toggles.alphaToggle.tap()
     }
 }

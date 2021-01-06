@@ -37,9 +37,14 @@ class XCUITestSandboxUITests: XCTestCase {
         MainPage.dismissBlueAlert()
     }
     
-    func testToggle() {
+    func testToggleChangesNavBarText() {
+        app.launch()
+        MainPage.toggleAlphaToOmega()
         
-    
+        XCTAssert(MainPage.navBars.omega.exists)
+        MainPage.toggleOmegaToAlpha()
+        
+        XCTAssert(MainPage.navBars.alpha.exists)
     }
 
     func testLaunchPerformance() throws {
