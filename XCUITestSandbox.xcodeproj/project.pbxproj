@@ -38,6 +38,7 @@
 		A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestSandboxUITests.swift; sourceTree = "<group>"; };
 		A450B459258684E000A23BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A494E43425A6273A007BC725 /* MainPageObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageObjectModel.swift; sourceTree = "<group>"; };
+		B9165FE42BD8406400419502 /* XCUITestSandbox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = XCUITestSandbox.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		A450B456258684E000A23BC3 /* XCUITestSandboxUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B9165FE42BD8406400419502 /* XCUITestSandbox.xctestplan */,
 				A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */,
 				A494E43425A6273A007BC725 /* MainPageObjectModel.swift */,
 				A450B459258684E000A23BC3 /* Info.plist */,
