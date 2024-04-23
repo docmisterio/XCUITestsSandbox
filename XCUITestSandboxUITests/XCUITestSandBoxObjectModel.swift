@@ -45,10 +45,6 @@ class XCUITestSandBoxObjectModel {
         XCUITestSandBoxObjectModel.Slider.theLoneSlider.adjust(toNormalizedSliderPosition: number)
     }
     
-    static func tapBlueColorButton() {
-        XCUITestSandBoxObjectModel.Buttons.blueButton.tap()
-    }
-    
     static func dismissBlueAlert() {
         XCUITestSandBoxObjectModel.Alerts.alertBlue.tap()
     }
