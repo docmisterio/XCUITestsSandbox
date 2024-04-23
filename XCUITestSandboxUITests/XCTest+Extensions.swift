@@ -1,6 +1,6 @@
 import XCTest
 /// Best to collect like items in enums for use later, bonus points for good naming so everything is clear.
-enum waitTimeIntervals {
+enum WaitTimes {
     static let standard: TimeInterval = 2
     static let extended: TimeInterval = 5
 }
@@ -32,7 +32,7 @@ extension XCTestCase {
         Thread.sleep(forTimeInterval: numberOfSeconds)
     }
     
-    func findElement(_ element: XCUIElement, timeOutAt numberOfSeconds: TimeInterval, andTap tap: Bool? = nil) throws {
+    func findElement(_ element: XCUIElement, timeOutAt numberOfSeconds: TimeInterval, andTap tap: Bool? = nil) {
         guard element.waitForExistence(timeout: 2) else {
             XCTFail(Failures.couldNotFindElement)
             return
