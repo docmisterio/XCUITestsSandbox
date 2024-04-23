@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "182038C0-277C-4FC4-9575-140EF0E35ABA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:XCUITestSandbox.xcodeproj",
+      "identifier" : "51F935F4208F339C00265114",
+      "name" : "XCUITestSandbox"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:XCUITestSandbox.xcodeproj",
+        "identifier" : "A450B454258684E000A23BC3",
+        "name" : "XCUITestSandboxUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
