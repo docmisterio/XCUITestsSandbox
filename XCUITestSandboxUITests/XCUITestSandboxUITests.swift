@@ -4,6 +4,7 @@ class XCUITestSandboxUITests: XCTestCase {
     var app = XCUIApplication()
     
     override func setUpWithError() throws {
+        app.launch()
         continueAfterFailure = false
     }
 
@@ -12,14 +13,16 @@ class XCUITestSandboxUITests: XCTestCase {
     }
     
     func testLabelShowsTextFieldInput() throws {
-        app.launch()
-        MainPageObjectModel.labelResultShowsTextFieldInput()
+        let textField = MainPageObjectModel.TextField.theLoneTextField
         
-        XCTAssert(MainPageObjectModel.Label.textFieldResult.exists)
+        try findElement(textField, timeOutAt: waitTimeIntervals.standard, andTap: true)
+        textField.typeText(typedText.test)
+
+        verifyElement(MainPageObjectModel.Label.textFieldResult)
     }
     
     func testSliderControlsProgress() {
-        app.launch()
+        
         MainPageObjectModel.adjustSliderTo(number: 1)
         
         guard let completion = MainPageObjectModel.ProgressBar.theLoneProgressBar.value as? String else {
