@@ -21,7 +21,7 @@ class XCUITestSandboxUITests: XCTestCase {
     func testLabelShowsTextFieldInput() throws {
         let textField = XCUITestSandBoxObjectModel.TextField.theLoneTextField
         
-        try findElement(textField, timeOutAt: waitTimeIntervals.standard, andTap: true)
+        findElement(textField, timeOutAt: WaitTimes.standard, andTap: true)
         textField.typeText(typedText.test)
 
         /// It's important to use the XCUIElement version of what appears on the label cause that asserts and confirms what we typed in the TextField is showing in the Label Field
@@ -54,11 +54,15 @@ class XCUITestSandboxUITests: XCTestCase {
     }
     
     func testButtonsShowAlerts() {
-        app.launch()
-        XCUITestSandBoxObjectModel.tapBlueColorButton()
+        let buttonBlue = XCUITestSandBoxObjectModel.Buttons.blueButton
+        let alertBlue = XCUITestSandBoxObjectModel.Alerts.alertBlue
         
-        XCTAssert(XCUITestSandBoxObjectModel.Alerts.alertBlue.exists)
+        findElement(buttonBlue, timeOutAt: WaitTimes.standard, andTap: true)
+        
+        verifyElement(alertBlue)
         XCUITestSandBoxObjectModel.dismissBlueAlert()
+        
+        XCTAssertFalse(alertBlue.exists)
     }
     
     func testToggleChangesNavBarText() {
