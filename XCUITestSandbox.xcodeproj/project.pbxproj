@@ -14,6 +14,7 @@
 		51F93603208F339D00265114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F93601208F339D00265114 /* LaunchScreen.storyboard */; };
 		A450B458258684E000A23BC3 /* XCUITestSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */; };
 		A494E43525A6273A007BC725 /* MainPageObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A494E43425A6273A007BC725 /* MainPageObjectModel.swift */; };
+		B9165FE62BD846CF00419502 /* XCTest + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9165FE52BD846CF00419502 /* XCTest + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		A450B459258684E000A23BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A494E43425A6273A007BC725 /* MainPageObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageObjectModel.swift; sourceTree = "<group>"; };
 		B9165FE42BD8406400419502 /* XCUITestSandbox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = XCUITestSandbox.xctestplan; sourceTree = SOURCE_ROOT; };
+		B9165FE52BD846CF00419502 /* XCTest + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */,
 				A494E43425A6273A007BC725 /* MainPageObjectModel.swift */,
 				A450B459258684E000A23BC3 /* Info.plist */,
+				B9165FE52BD846CF00419502 /* XCTest + Extensions.swift */,
 			);
 			path = XCUITestSandboxUITests;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A450B458258684E000A23BC3 /* XCUITestSandboxUITests.swift in Sources */,
+				B9165FE62BD846CF00419502 /* XCTest + Extensions.swift in Sources */,
 				A494E43525A6273A007BC725 /* MainPageObjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
