@@ -8,7 +8,7 @@ class XCUITestSandboxUITests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-    
+        /// Nothing currently we'd need to do here in this demo but once could imagine logging out, reseting state, clearing some data
     }
     
     func testLabelShowsTextFieldInput() throws {
