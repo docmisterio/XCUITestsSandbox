@@ -66,13 +66,15 @@ class XCUITestSandboxUITests: XCTestCase {
     }
     
     func testToggleChangesNavBarText() {
-        app.launch()
+        let NavBarOmega = XCUITestSandBoxObjectModel.NavBars.omega
+        let NavBarAlpha = XCUITestSandBoxObjectModel.NavBars.alpha
+        
         XCUITestSandBoxObjectModel.toggleAlphaToOmega()
         
-        XCTAssert(XCUITestSandBoxObjectModel.NavBars.omega.exists)
+        verifyElement(NavBarOmega)
         XCUITestSandBoxObjectModel.toggleOmegaToAlpha()
         
-        XCTAssert(XCUITestSandBoxObjectModel.NavBars.alpha.exists)
+        verifyElement(NavBarAlpha)
     }
 
     func testLaunchPerformance() throws {
