@@ -13,7 +13,7 @@
 		51F93600208F339D00265114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F935FF208F339D00265114 /* Assets.xcassets */; };
 		51F93603208F339D00265114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F93601208F339D00265114 /* LaunchScreen.storyboard */; };
 		A450B458258684E000A23BC3 /* XCUITestSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */; };
-		A494E43525A6273A007BC725 /* MainPageObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A494E43425A6273A007BC725 /* MainPageObjectModel.swift */; };
+		A494E43525A6273A007BC725 /* XCUITestSandBoxObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A494E43425A6273A007BC725 /* XCUITestSandBoxObjectModel.swift */; };
 		B9165FE62BD846CF00419502 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9165FE52BD846CF00419502 /* XCTest+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		A450B455258684E000A23BC3 /* XCUITestSandboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUITestSandboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestSandboxUITests.swift; sourceTree = "<group>"; };
 		A450B459258684E000A23BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A494E43425A6273A007BC725 /* MainPageObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageObjectModel.swift; sourceTree = "<group>"; };
+		A494E43425A6273A007BC725 /* XCUITestSandBoxObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestSandBoxObjectModel.swift; sourceTree = "<group>"; };
 		B9165FE42BD8406400419502 /* XCUITestSandbox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = XCUITestSandbox.xctestplan; sourceTree = SOURCE_ROOT; };
 		B9165FE52BD846CF00419502 /* XCTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +97,7 @@
 			children = (
 				B9165FE42BD8406400419502 /* XCUITestSandbox.xctestplan */,
 				A450B457258684E000A23BC3 /* XCUITestSandboxUITests.swift */,
-				A494E43425A6273A007BC725 /* MainPageObjectModel.swift */,
+				A494E43425A6273A007BC725 /* XCUITestSandBoxObjectModel.swift */,
 				A450B459258684E000A23BC3 /* Info.plist */,
 				B9165FE52BD846CF00419502 /* XCTest+Extensions.swift */,
 			);
@@ -217,7 +217,7 @@
 			files = (
 				A450B458258684E000A23BC3 /* XCUITestSandboxUITests.swift in Sources */,
 				B9165FE62BD846CF00419502 /* XCTest+Extensions.swift in Sources */,
-				A494E43525A6273A007BC725 /* MainPageObjectModel.swift in Sources */,
+				A494E43525A6273A007BC725 /* XCUITestSandBoxObjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

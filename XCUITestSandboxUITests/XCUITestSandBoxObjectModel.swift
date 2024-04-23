@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-class MainPageObjectModel {
+class XCUITestSandBoxObjectModel {
     enum Buttons {
         static let redButton = XCUIApplication().buttons["Red"]
         static let greenButton = XCUIApplication().buttons["Green"]
@@ -41,29 +41,23 @@ class MainPageObjectModel {
         static let omega = XCUIApplication().navigationBars["Omega"].staticTexts["Omega"]
     }
     
-    static func labelResultShowsTextFieldInput() {
-        MainPageObjectModel.TextField.theLoneTextField.tap()
-        MainPageObjectModel.TextField.theLoneTextField.typeText("test")
-        MainPageObjectModel.Buttons.returnButton.tap()
-    }
-    
     static func adjustSliderTo(number: CGFloat) {
-        MainPageObjectModel.Slider.theLoneSlider.adjust(toNormalizedSliderPosition: number)
+        XCUITestSandBoxObjectModel.Slider.theLoneSlider.adjust(toNormalizedSliderPosition: number)
     }
     
     static func tapBlueColorButton() {
-        MainPageObjectModel.Buttons.blueButton.tap()
+        XCUITestSandBoxObjectModel.Buttons.blueButton.tap()
     }
     
     static func dismissBlueAlert() {
-        MainPageObjectModel.Alerts.alertBlue.tap()
+        XCUITestSandBoxObjectModel.Alerts.alertBlue.tap()
     }
     
     static func toggleAlphaToOmega() {
-        MainPageObjectModel.Toggles.omegaToggle.tap()
+        XCUITestSandBoxObjectModel.Toggles.omegaToggle.tap()
     }
     
     static func toggleOmegaToAlpha() {
-        MainPageObjectModel.Toggles.alphaToggle.tap()
+        XCUITestSandBoxObjectModel.Toggles.alphaToggle.tap()
     }
 }
