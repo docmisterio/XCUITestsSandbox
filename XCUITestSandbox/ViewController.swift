@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func sliderDragged(_ sender: UISlider) {
-        progressView.progress = 1 - slider.value
+        progressView.progress = slider.value
     }
 
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
