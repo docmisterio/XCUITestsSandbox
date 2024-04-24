@@ -1,11 +1,14 @@
 import XCTest
 
+/// These are currently all in the realm of "Success Flow" Tests as they're all about the app successfully doing what we want it to do. Failure Flows, while not represented here would be something like ensuring the app fails successfully - not to be confused with negative testing.
+
 class XCUITestSandboxUITests: XCTestCase {
     var app = XCUIApplication()
     
     override func setUpWithError() throws {
         app.launch()
         continueAfterFailure = false
+        /// Additional items to consider for setup is passing launch args that may flip UserDefaults flags, log in, ready or seed some data used by all tests
     }
 
     override func tearDownWithError() throws {
@@ -62,7 +65,7 @@ class XCUITestSandboxUITests: XCTestCase {
         verifyElement(alertBlue)
         XCUITestSandBoxObjectModel.dismissBlueAlert()
         
-        XCTAssertFalse(alertBlue.exists)
+        XCTAssertFalse(alertBlue.exists) /// here we are asserting the previously dismissed DOES NOT exist as a final assertion because that Flow ends here.
     }
     
     func testToggleChangesNavBarText() {
