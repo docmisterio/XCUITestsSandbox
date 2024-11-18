@@ -1,5 +1,6 @@
 import XCTest
 /// Best to collect like items in enums for use later, bonus points for good naming so everything is clear.
+
 enum WaitTimes {
     static let standard: TimeInterval = 2
     static let extended: TimeInterval = 5

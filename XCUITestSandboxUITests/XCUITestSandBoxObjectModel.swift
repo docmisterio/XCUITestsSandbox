@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-/// The form of the "Screen Object Model" may begin to take shape as you look at this but the basic form is Top Level Screen > Possible Visible element > Always Visible element. You can go as deep as you'd like cause these enums just chain together for a fairly readable traceability from your element to the main screen it belongs to
+/// The form of the "Screen Object Model" may begin to take shape as you look at this but the basic form is Top Level Screen > Possible Visible element > Always Visible element. You can go as deep as you'd like cause these enums just chain together for a fairly readable traceability from your element to the main screen to which it belongs. 
 
 class XCUITestSandBoxObjectModel {
     enum Buttons {
