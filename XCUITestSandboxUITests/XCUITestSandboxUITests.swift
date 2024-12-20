@@ -7,7 +7,7 @@ class XCUITestSandboxUITests: XCTestCase {
         app.launch()
         continueAfterFailure = false
     }
-
+    
     override func tearDownWithError() throws {
         /// Nothing currently we'd need to do here in this demo but once could imagine logging out, reseting state, clearing some data
     }
@@ -17,7 +17,7 @@ class XCUITestSandboxUITests: XCTestCase {
         
         findElement(textField, timeOutAt: WaitTimes.standard, andTap: true)
         textField.typeText(typedText.test)
-
+        
         verifyElement(XCUITestSandBoxObjectModel.Label.textFieldResult)
     }
     
@@ -65,7 +65,7 @@ class XCUITestSandboxUITests: XCTestCase {
         
         verifyElement(NavBarAlpha)
     }
-
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
